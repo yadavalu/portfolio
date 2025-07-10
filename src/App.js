@@ -5,23 +5,25 @@ import { motion } from 'framer-motion'
 const projects = [
   {
     id: 1,
-    title: "Smart Grid Optimization",
-    description: "Developed a machine learning model to reduce energy waste by 23% in simulated environments.",
-    tech: ["Python", "TensorFlow", "MATLAB"],
-    link: "#"
+    title: "Aadith Panels",
+    description: "A social enterprise founded by myself focused on sustainable energy solutions by providing solar panel system designs to small power-intensive firms & organisations.",
+    tech: ["Python", "CAD/ANSYS", "Manufacturing", "Leadership"],
+    link: "https://yadavalu.github.io/Aadith-Panels/",
+    image: "/images/RGTemple.jpg"
   },
   {
     id: 2,
-    title: "IoT Power Monitoring",
-    description: "Built a real-time IoT system for monitoring power usage in industrial settings.",
-    tech: ["C++", "ESP32", "AWS IoT"],
-    link: "#"
+    title: "E-Library GUI System",
+    description: "Built an E-Library system for Radha-Govinda Temple to manage and keep track of their theological book inventory and lending system.",
+    tech: ["Python", "Qt5", "SQL"],
+    link: "https://gitlab.com/YG-alu/rg-temple-library",
+    image: "/images/E-library.jpg"
   },
   {
     id: 3,
-    title: "Solar Inverter Design",
-    description: "Prototyped a 5kW inverter with 98.2% efficiency using GaN transistors.",
-    tech: ["Altium", "Simulink", "Power Systems"],
+    title: "E-Bike Conversion",
+    description: "Converted mechanical bicycle to an electric bicycle with a 250W motor, 24V battery and a custom PCB for control systems.",
+    tech: ["Manufacturing", "Control Systems"],
     link: "#"
   }
 ]
@@ -42,9 +44,8 @@ const publications = [
     title: "Computation of maximum slosh wave height for various viscous liquids with linear and non-linear models",
     affiliation: "Berlin International School",
     journal: "Journal of Fluids and Structures",
-    doi: "unavailable",
+    doi: "#",
     year: "July 2025",
-    description: "TODO",
     keywords: ["Sloshing", "Maximum slosh wave height", "Linear mechanical model", "Non-linear mechanical model", "Duffing oscillator"]
   }
 ]
@@ -60,19 +61,24 @@ const education = [
 ]
 
 const skills = [
-  "Power Systems", "Circuit Design", "C++", "Python", "MATLAB", "PCB Design", "PLC Programming", "AutoCAD"
+  "Python", "Webdev", "AutoCAD", "Ansys", "Manufacturing", "Leadership", "Project Management", "Data Analysis", "Problem Solving", "Teamwork", "Communication"
 ]
 
 const languages = [
   { name: "English", level: "Native" },
-  { name: "German", level: "Fluent, C1" },
-  { name: "Tamil", level: "Mothertongue" }
+  { name: "German", level: "Fluent C1" },
+  { name: "Tamil", level: "Mothertongue" },
+  { name: "Spanish", level: "Basics ~A1" },
+  { name: "Sanskrit", level: "Basics ~A1" }
 ]
 
 const honors = [
-  { title: "IEEE Best Paper Award", year: "2022" },
-  { title: "National Engineering Competition Winner", year: "2021" },
-  { title: "Siemens Innovation Grant Recipient", year: "2020" }
+  { title: "Valedictorian award", year: "June 2025" },
+  { title: "DPG-Abiturpreis", year: "June 2025" },
+  { title: "Kant Prize 2025 Winner", year: "May 2025" },
+  { title: "Kant Medal 2025 Natural Science Nominee", year: "May 2025" },
+  { title: "Cambridge IGCSE Mathematics Top in Germany Award", year: "August 2023" },
+  { title: "Cayley CEMS Waterloo Contest International High Honor Role", year: "June 2023" }
 ]
 
 const sectionVariants = {
@@ -106,7 +112,7 @@ function App() {
             Aadith Yadav G.
           </span>
           <div className="flex gap-6 text-green-900 font-medium text-sm">
-            {["about", "projects", "education", "skills", "languages", "honors", "contact"].map((sec) => (
+            {["about", "projects", "experience", "publications", "education", "skills", "languages", "honors", "contact"].map((sec) => (
               <button
                 key={sec}
                 className="hover:text-yellow-600 transition-colors"
@@ -138,9 +144,9 @@ function App() {
           </motion.div>
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-green-900 mb-2">Aadith Yadav Govindarajan</h1>
-            <p className="text-xl text-green-700 mb-4">Power Systems Engineer & IoT Specialist</p>
+            <p className="text-xl text-green-700 mb-4">Engineering student @ Berlin International School</p>
             <p className="text-yellow-900 max-w-xl mb-4">
-              Innovative electrical engineer with 5+ years of experience in power systems optimization and IoT device development. Passionate about sustainable energy solutions and smart grid technologies.
+              Student at Berlin International School with a passion for mechanical & electrical engineering. Part-time founder at Aadith Panels, a social enterprise focused on sustainable energy solutions by providing solar panel system designs to small power-intensive firms & organisations. 
             </p>
             <div className="flex gap-4">
               <button
@@ -181,7 +187,15 @@ function App() {
                 className="block bg-gradient-to-br from-yellow-100 to-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-6 group"
               >
                 <div className="h-32 w-full bg-yellow-200 rounded-xl mb-4 flex items-center justify-center text-3xl text-green-400 group-hover:text-green-700 transition">
-                  <span role="img" aria-label="project">💡</span>
+                  {(!project.image || project.image === "none") ? (
+                    <span role="img" aria-label="project">💡</span>
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-32 overflow-hidden object-fit rounded-lg"
+                    />
+                  )}
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-green-800">{project.title}</h3>
                 <p className="text-yellow-900 mb-3">{project.description}</p>
@@ -253,18 +267,24 @@ function App() {
               <motion.div
                 key={pubs.title}
                 whileHover={{ scale: 1.03 }}
-                className="flex items-center gap-4 bg-gradient-to-r from-yellow-100 to-white p-5 rounded-xl shadow-md"
+                className="flex items-center gap-4 bg-gradient-to-r from-yellow-100 to-white p-5 rounded-xl shadow-md transition cursor-pointer"
+                onClick={() => window.open(pubs.doi, '_blank', 'noopener,noreferrer')}
+                tabIndex={0}
+                role="button"
+                onKeyPress={e => {
+                  if (e.key === 'Enter' || e.key === ' ') window.open(pubs.doi, '_blank', 'noopener,noreferrer');
+                }}
               >
                 <div>
                   <h3 className="font-semibold text-green-800">{pubs.title}</h3>
-                  <p className="font-medium text-yellow-900">{pubs.journal}</p>
+                  <p className="font-medium text-green-800">{pubs.journal}</p>
                   <p className="text-sm text-yellow-900">{pubs.year}</p>
                   <div className="flex flex-wrap gap-2 gap-top-2 mt-2">
-                  {pubs.keywords.map(keywords => (
-                    <span key={keywords} className="text-xs text-green-800 bg-yellow-100 px-2 py-1 rounded">
-                      {keywords}
-                    </span>
-                  ))}
+                    {pubs.keywords.map(keywords => (
+                      <span key={keywords} className="text-xs text-green-800 bg-yellow-100 px-2 py-1 rounded">
+                        {keywords}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </motion.div>
@@ -397,35 +417,28 @@ function App() {
           className="max-w-2xl mx-auto px-4"
         >
           <h2 className="text-3xl font-bold mb-8 text-green-900">Contact</h2>
-          <form
-            className="bg-white rounded-xl shadow-md p-8 flex flex-col gap-4"
-            onSubmit={e => { e.preventDefault(); alert('Thank you for reaching out!'); }}
-          >
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="border border-yellow-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-200"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="border border-yellow-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-200"
-              required
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={4}
-              className="border border-yellow-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-200"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-green-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-800 transition"
-            >
-              Send Message
-            </button>
-          </form>
+          <div className="bg-white rounded-xl shadow-md p-8 flex flex-col gap-6 items-center">
+            <div className="flex items-center gap-3">
+              <span className="text-green-700 text-xl font-semibold">Email:</span>
+              <a
+                href="mailto:g.aadithyadav@gmail.com"
+                className="text-green-900 underline hover:text-green-700 transition"
+              >
+                g.aadithyadav@email.com
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-green-700 text-xl font-semibold">LinkedIn:</span>
+              <a
+                href="https://www.linkedin.com/in/aadith-yadav-govindarajan-8a18b0280/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-900 underline hover:text-green-700 transition"
+              >
+                linkedin.com/in/aadith-yadav
+              </a>
+            </div>
+          </div>
         </motion.div>
       </section>
 
