@@ -191,7 +191,7 @@ function App() {
                     <span role="img" aria-label="project">💡</span>
                   ) : (
                     <img
-                      src={project.image}
+                      src={process.env.PUBLIC_URL + project.image}
                       alt={project.title}
                       className="w-full h-32 overflow-hidden object-fit rounded-lg"
                     />
