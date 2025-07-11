@@ -483,7 +483,7 @@ function App() {
   return (
     <div className="min-h-screen bg-yellow-100 font-sans">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full z-30 bg-white/80 backdrop-blur shadow-sm">
+      <nav className="fixed top-0 left-0 w-full z-30 bg-yellow/80 backdrop-blur shadow-sm">
         <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
           <span className="font-bold text-green-800 text-xl tracking-tight cursor-pointer" onClick={() => setActiveSection('about')}>
             Aadith Yadav G.
@@ -508,7 +508,7 @@ function App() {
       </div>
 
       {/* Footer */}
-      <footer className="text-center py-6 text-yellow-900 text-sm fixed bottom-0 left-0 w-full bg-white/80 pointer-events-none select-none">
+      <footer className="text-center py-6 text-green-900 text-sm fixed bottom-0 left-0 w-full bg-yello/80 pointer-events-none select-none">
         &copy; {new Date().getFullYear()} Aadith Yadav G. All rights reserved.
       </footer>
     </div>
