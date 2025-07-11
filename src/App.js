@@ -34,8 +34,8 @@ const experience = [
     company: "Aadith Panels",
     location: "Berlin, Germany",
     year: "March 2024 - July 2025",
-    description: "Assisted in the design of compressor blade with modal analysis using ANSYS, basics of CAD modelling for turbine fan blade, unittesting for python codebase and basics of project management.",
-    key: ["Ansys", "CAD", "Python", "Project Management"]
+    description: "Founded a social enterprise, consisting of a team of 7, focused on sustainable energy solutions, providing solar panel system designs to small power-intensive firms and organisations.",
+    key: ["Ansys", "CAD", "Manufacturing", "Leadership", "Business Ownership"],
   },
   {
     position: "Student Internship",
@@ -68,8 +68,12 @@ const education = [
   }
 ]
 
-const skills = [
-  "Python", "Webdev", "Data Analysis", "CAD", "ANSYS", "Manufacturing", "Leadership", "Project Management", "Problem Solving", "Teamwork", "Communication"
+const tech_skills = [
+  "Python", "Webdev", "Data Analysis", "CAD", "ANSYS", "Manufacturing"
+] 
+
+const soft_skills = [
+  "Leadership", "Project Management", "Problem Solving", "Teamwork", "Communication"
 ]
 
 const languages = [
@@ -127,7 +131,7 @@ const sectionVariants = {
 
 function App() {
   const sectionList = [
-    "about", "projects", "experience", "publications", "education", "skills", "languages", "honors", "contact"
+    "about", "projects", "experience", "publications", "education", "skills", "honors", "contact"
   ]
   const [activeSection, setActiveSection] = useState("about")
 
@@ -352,11 +356,11 @@ function App() {
               initial="hidden"
               animate="visible"
               variants={sectionVariants}
-              className="max-w-6xl mx-auto px-4"
+              className="max-w-6xl mx-auto px-4 pb-24"
             >
               <h2 className="text-3xl font-bold mb-8 text-green-900">Technical Skills</h2>
               <div className="flex flex-wrap gap-3">
-                {skills.map(skill => (
+                {tech_skills.map(skill => (
                   <motion.span
                     key={skill}
                     whileHover={{ scale: 1.1 }}
@@ -367,16 +371,30 @@ function App() {
                 ))}
               </div>
             </motion.div>
-          </section>
-        )
-      case "languages":
-        return (
-          <section className="w-full h-full flex flex-col items-start justify-start bg-yellow-100 overflow-auto p-8">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={sectionVariants}
-              className="max-w-6xl mx-auto px-4"
+              className="max-w-6xl mx-auto px-4 pb-24"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-green-900">Soft Skills</h2>
+              <div className="flex flex-wrap gap-3">
+                {soft_skills.map(skill => (
+                  <motion.span
+                    key={skill}
+                    whileHover={{ scale: 1.1 }}
+                    className="bg-yellow-100 text-green-800 px-4 py-2 rounded-full hover:bg-yellow-200 cursor-pointer transition-colors shadow"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={sectionVariants}
+              className="max-w-6xl mx-auto px-4 pb-24"
             >
               <h2 className="text-3xl font-bold mb-8 text-green-900">Languages</h2>
               <div className="flex flex-wrap gap-6">
