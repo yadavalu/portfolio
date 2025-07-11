@@ -69,7 +69,7 @@ const education = [
 ]
 
 const skills = [
-  "Python", "Webdev", "AutoCAD", "Ansys", "Manufacturing", "Leadership", "Project Management", "Data Analysis", "Problem Solving", "Teamwork", "Communication"
+  "Python", "Webdev", "Data Analysis", "CAD", "ANSYS", "Manufacturing", "Leadership", "Project Management", "Problem Solving", "Teamwork", "Communication"
 ]
 
 const languages = [
@@ -81,12 +81,43 @@ const languages = [
 ]
 
 const honors = [
-  { title: "Valedictorian award", year: "June 2025" },
-  { title: "DPG-Abiturpreis", year: "June 2025" },
-  { title: "Kant Prize 2025 Winner", year: "May 2025" },
-  { title: "Kant Medal 2025 Natural Science Nominee", year: "May 2025" },
-  { title: "Cambridge IGCSE Mathematics Top in Germany Award", year: "August 2023" },
-  { title: "Cayley CEMS Waterloo Contest International High Honor Role", year: "June 2023" }
+  { 
+    title: "Valedictorian award",
+    year: "June 2025",
+    awardedBy: "Berlin International School",
+    description: "Awarded for maintaining highest overall (German) GPA of 1.0 throughout the IB Diploma at Berlin International School",
+  },
+  { 
+    title: "DPG-Abiturpreis",
+    year: "June 2025",
+    awardedBy: "Deutsche Physikalische Gesellschaft",
+    description: "Awarded for outstanding performance in Physics during the IB Diploma",
+  },
+  { 
+    title: "Kant Prize 2025 Winner",
+    year: "May 2025",
+    awardedBy: "Stiftung Private Kant-Schulen gGmbH",
+    description: "Awarded for research paper stemming from our BL4S 2025 proposal on optimising neutron spallation target geometry",
+  },
+  { 
+    title: "Kant Medal 2025 Natural Science Nominee",
+    year: "May 2025",
+    awardedBy: "Stiftung Private Kant-Schulen gGmbH",
+    description: "Nominated for Kant Medal 2025 in Natural Science category for extended essay in modelling sloshing using mechanical models",
+  },
+  { 
+    title: "Cambridge IGCSE Mathematics Top in Germany Award",
+    year: "August 2023",
+    awardedBy: "Cambridge Assessment International Education",
+    description: "Awarded for achieving the highest mark in IGCSE Mathematics in Germany",
+  },
+  { 
+    title: "Cayley CEMS Waterloo Contest International High Honor Role",
+    year: "June 2023",
+    awardedBy: "CEMS, University of Waterloo",
+    description: "Awarded for achieving a score, ranking 34th internationally under Group III of the honour role, in the Cayley Mathematics contest",
+
+  }
 ]
 
 const sectionVariants = {
@@ -100,7 +131,7 @@ function App() {
   ]
   const [activeSection, setActiveSection] = useState("about")
 
-  // Disable scroll on body
+  // Disable scroll on body, allow scroll within section
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => { document.body.style.overflow = '' }
@@ -111,10 +142,11 @@ function App() {
     switch (section) {
       case "about":
         return (
-          <section className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-green-100">
+          <section className="w-screen h-screen flex items-center justify-center bg-yellow-100">
             <motion.div
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
               variants={sectionVariants}
               className="flex flex-col md:flex-row items-center gap-10"
             >
@@ -128,9 +160,9 @@ function App() {
               </motion.div>
               <div>
                 <h1 className="text-4xl md:text-5xl font-extrabold text-green-900 mb-2">Aadith Yadav Govindarajan</h1>
-                <p className="text-xl text-green-700 mb-4">Engineering student @ Berlin International School</p>
+                <p className="text-xl text-green-700 mb-4">Aspiring engineering student @ Berlin International School</p>
                 <p className="text-yellow-900 max-w-xl mb-4">
-                  Student at Berlin International School with a passion for mechanical & electrical engineering. Part-time founder at Aadith Panels, a social enterprise focused on sustainable energy solutions by providing solar panel system designs to small power-intensive firms & organisations.
+                  IB Student at Berlin International School with a passion for mechanical & electrical engineering. Part-time founder at Aadith Panels, a social enterprise focused on sustainable energy solutions.
                 </p>
                 <div className="flex gap-4">
                   <button
@@ -152,7 +184,7 @@ function App() {
         )
       case "projects":
         return (
-          <section className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-green-100">
+          <section className="w-full h-full flex flex-col items-start justify-start from-yellow-100 overflow-auto p-8">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -168,7 +200,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.04, boxShadow: "0 8px 32px rgba(202, 138, 4, 0.15)" }}
-                    className="block bg-gradient-to-br from-yellow-100 to-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-6 group"
+                    className="block bg-yellow-100 rounded-2xl shadow-md hover:shadow-xl transition-shadow p-6 group"
                   >
                     <div className="h-32 w-full bg-yellow-200 rounded-xl mb-4 flex items-center justify-center text-3xl text-green-400 group-hover:text-green-700 transition">
                       {(!project.image || project.image === "none") ? (
@@ -185,7 +217,7 @@ function App() {
                     <p className="text-yellow-900 mb-3">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map(tech => (
-                        <span key={tech} className="text-xs text-green-800 bg-yellow-100 px-2 py-1 rounded">
+                        <span key={tech} className="text-xs text-green-800 bg-[#f0f0b0] px-2 py-1 rounded">
                           {tech}
                         </span>
                       ))}
@@ -198,7 +230,7 @@ function App() {
         )
       case "experience":
         return (
-          <section className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-green-100">
+          <section className="w-full h-full flex flex-col items-start justify-start bg-yellow-100 overflow-auto p-8">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -213,18 +245,19 @@ function App() {
                     key={exp.position}
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ delay: idx * 0.2 }}
                     className="mb-10 flex items-start relative"
                   >
                     <div className="w-4 h-4 bg-green-700 rounded-full absolute -left-3 top-2"></div>
-                    <div className="bg-white p-6 rounded-xl shadow-md ml-6 flex-1 hover:shadow-lg transition-shadow">
+                    <div className="bg-yellow-100 p-6 rounded-xl shadow-md ml-6 flex-1 hover:shadow-lg transition-shadow">
                       <h3 className="text-xl font-semibold text-green-800">{exp.position}</h3>
                       <p className="text-green-700 font-medium">{exp.company}</p>
                       <p className="text-sm text-yellow-900 mb-2">{exp.year}</p>
                       <p className="text-yellow-900">{exp.description}</p>
                       <div className="flex flex-wrap gap-2 gap-top-2 mt-2">
                         {exp.key.map(key => (
-                          <span key={key} className="text-xs text-green-800 bg-yellow-100 px-2 py-1 rounded">
+                          <span key={key} className="text-xs text-green-800 bg-[#f0f0b0] px-2 py-1 rounded">
                             {key}
                           </span>
                         ))}
@@ -238,7 +271,7 @@ function App() {
         )
       case "publications":
         return (
-          <section className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-green-100">
+          <section className="w-full h-full flex flex-col items-start justify-start bg-yellow-100 overflow-auto p-8">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -249,9 +282,9 @@ function App() {
               <div className="grid md:grid-cols-2 gap-6">
                 {publications.map((pubs, i) => (
                   <motion.div
-                    key={pubs.title}
+                    key={pubs.title + i}
                     whileHover={{ scale: 1.03 }}
-                    className="flex items-center gap-4 bg-gradient-to-r from-yellow-100 to-white p-5 rounded-xl shadow-md transition cursor-pointer"
+                    className="flex items-center gap-4 bg-yellow-100 p-5 rounded-xl shadow-md transition cursor-pointer"
                     onClick={() => window.open(pubs.doi, '_blank', 'noopener,noreferrer')}
                     tabIndex={0}
                     role="button"
@@ -265,7 +298,7 @@ function App() {
                       <p className="text-sm text-yellow-900">{pubs.year}</p>
                       <div className="flex flex-wrap gap-2 gap-top-2 mt-2">
                         {pubs.keywords.map(keywords => (
-                          <span key={keywords} className="text-xs text-green-800 bg-yellow-100 px-2 py-1 rounded">
+                          <span key={keywords} className="text-xs text-green-800 bg-[#f0f0b0] px-2 py-1 rounded">
                             {keywords}
                           </span>
                         ))}
@@ -279,7 +312,7 @@ function App() {
         )
       case "education":
         return (
-          <section className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-green-100">
+          <section className="w-full h-full flex flex-col items-start justify-start bg-yellow-100 overflow-auto p-8">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -294,11 +327,12 @@ function App() {
                     key={edu.degree}
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ delay: idx * 0.2 }}
                     className="mb-10 flex items-start relative"
                   >
                     <div className="w-4 h-4 bg-green-700 rounded-full absolute -left-3 top-2"></div>
-                    <div className="bg-white p-6 rounded-xl shadow-md ml-6 flex-1 hover:shadow-lg transition-shadow">
+                    <div className="bg-yellow-100 p-6 rounded-xl shadow-md ml-6 flex-1 hover:shadow-lg transition-shadow">
                       <h3 className="text-xl font-semibold text-green-800">{edu.degree}</h3>
                       <p className="text-green-700 font-medium">{edu.school}</p>
                       <p className="text-sm text-yellow-900 mb-2">{edu.year}</p>
@@ -313,7 +347,7 @@ function App() {
         )
       case "skills":
         return (
-          <section className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-green-100">
+          <section className="w-full h-full flex flex-col items-start justify-start bg-yellow-100 overflow-auto p-8">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -337,7 +371,7 @@ function App() {
         )
       case "languages":
         return (
-          <section className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-green-100">
+          <section className="w-full h-full flex flex-col items-start justify-start bg-yellow-100 overflow-auto p-8">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -350,9 +384,8 @@ function App() {
                   <motion.div
                     key={lang.name}
                     whileHover={{ scale: 1.05 }}
-                    className="bg-white px-6 py-4 rounded-xl shadow-md flex flex-col items-center min-w-[140px]"
+                    className="bg-yellow-100 px-6 py-4 rounded-xl shadow-md flex flex-col items-center min-w-[140px]"
                   >
-                    <span className="text-2xl mb-2">🌐</span>
                     <span className="font-semibold text-green-800">{lang.name}</span>
                     <span className="text-sm text-yellow-900">{lang.level}</span>
                   </motion.div>
@@ -363,7 +396,7 @@ function App() {
         )
       case "honors":
         return (
-          <section className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-green-100">
+          <section className="w-full h-full flex flex-col items-start justify-start bg-yellow-100 overflow-auto p-8">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -376,14 +409,12 @@ function App() {
                   <motion.div
                     key={award.title}
                     whileHover={{ scale: 1.03 }}
-                    className="flex items-center gap-4 bg-gradient-to-r from-yellow-100 to-white p-5 rounded-xl shadow-md"
+                    className="flex items-center gap-4 bg-yellow-100 p-5 rounded-xl shadow-md"
                   >
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl">
-                      🏆
-                    </div>
                     <div>
                       <h3 className="font-semibold text-green-800">{award.title}</h3>
                       <p className="text-sm text-yellow-900">{award.year}</p>
+                      <p className="text-yellow-900">{award.description}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -393,7 +424,7 @@ function App() {
         )
       case "contact":
         return (
-          <section className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-white to-green-100">
+          <section className="w-full h-full flex flex-col items-start justify-start bg-yellow-100 overflow-auto p-8">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -401,14 +432,14 @@ function App() {
               className="max-w-2xl mx-auto px-4"
             >
               <h2 className="text-3xl font-bold mb-8 text-green-900">Contact</h2>
-              <div className="bg-white rounded-xl shadow-md p-8 flex flex-col gap-6 items-center">
+              <div className="bg-yellow-100 rounded-xl shadow-md p-8 flex flex-col gap-6 items-center">
                 <div className="flex items-center gap-3">
                   <span className="text-green-700 text-xl font-semibold">Email:</span>
                   <a
                     href="mailto:g.aadithyadav@gmail.com"
                     className="text-green-900 underline hover:text-green-700 transition"
                   >
-                    g.aadithyadav@email.com
+                    g.aadithyadav@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -419,7 +450,7 @@ function App() {
                     rel="noopener noreferrer"
                     className="text-green-900 underline hover:text-green-700 transition"
                   >
-                    linkedin.com/in/aadith-yadav
+                    linkedin.com/in/aadith-yadav-govindarajan-8a18b0280/
                   </a>
                 </div>
               </div>
@@ -432,14 +463,14 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-100 via-white to-green-100 font-sans">
+    <div className="min-h-screen bg-yellow-100 font-sans">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full z-30 bg-white/80 backdrop-blur shadow-sm">
         <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
           <span className="font-bold text-green-800 text-xl tracking-tight cursor-pointer" onClick={() => setActiveSection('about')}>
             Aadith Yadav G.
           </span>
-          <div className="flex gap-6 text-green-900 font-medium text-sm">
+          <div className="flex gap-6 text-green-900 font-medium text-sm overflow-x-auto scrollbar-thin scrollbar-thumb-[#d8ad71] scrollbar-track-transparent whitespace-nowrap">
             {sectionList.map((sec) => (
               <button
                 key={sec}
@@ -454,12 +485,12 @@ function App() {
       </nav>
 
       {/* Only render the active section */}
-      <div className="w-screen h-screen flex items-center justify-center pt-20">
+      <div className="w-screen h-screen flex items-center justify-center pt-20 pb-24">
         {renderSection(activeSection)}
       </div>
 
       {/* Footer */}
-      <footer className="text-center py-6 text-yellow-900 text-sm fixed bottom-0 left-0 w-full bg-white/80">
+      <footer className="text-center py-6 text-yellow-900 text-sm fixed bottom-0 left-0 w-full bg-white/80 pointer-events-none select-none">
         &copy; {new Date().getFullYear()} Aadith Yadav G. All rights reserved.
       </footer>
     </div>
@@ -467,3 +498,4 @@ function App() {
 }
 
 export default App
+
