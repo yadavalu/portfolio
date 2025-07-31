@@ -30,6 +30,14 @@ const projects = [
 
 const experience = [
   {
+    position: "Summer Internship",
+    company: "SAP Innovation Center",
+    location: "Potsdam, Germany",
+    year: "July 2025",
+    description: "Had an opportunity to learn the workings of SAP. Web development with ReactJs, NextJs and Python for EPR related projects.",
+    key: ["React.Js", "Next.Js", "Python", "Web Development"]
+  },
+  {
     position: "Founder",
     company: "Aadith Panels",
     location: "Berlin, Germany",
@@ -39,7 +47,7 @@ const experience = [
   },
   {
     position: "Student Internship",
-    company: "Rolls Royce Deutschland",
+    company: "Rolls-Royce Deutschland Ltd & CO KG",
     location: "Dahlewitz, Germany",
     year: "June 2023",
     description: "Assisted in the design of compressor blade with modal analysis using ANSYS, basics of CAD modelling for turbine fan blade, unittesting for python codebase and basics of project management.",
@@ -51,14 +59,21 @@ const publications = [
   {
     title: "Computation of maximum slosh wave height for various viscous liquids with linear and non-linear models",
     affiliation: "Berlin International School",
-    journal: "Journal of Fluids and Structures",
+    journal: "Ocean Engineering",
     doi: "#",
-    year: "July 2025",
+    year: "July 2025 (pipeline)",
     keywords: ["Sloshing", "Maximum slosh wave height", "Linear mechanical model", "Non-linear mechanical model", "Duffing oscillator"]
   }
 ]
 
 const education = [
+  {
+    degree: "B.Eng. Electrical Engineering with Second Major in Physics",
+    school: "National University of Singapore",
+    year: "2025-*2029",
+    grade: "*",
+    description: "B.Eng. Electrical Engineering with Second Major in Physics, specialising in VLSI",
+  },
   {
     degree: "IB Diploma",
     school: "Berlin International School",
