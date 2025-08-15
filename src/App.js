@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react'
 import './index.css'
 import { motion } from 'framer-motion'
 
+
+const subheading = "EE student @ NUS '29"
+const description = "Electrical Engineering student at NUS with an interest in VLSI and the semiconductor industry."
+
 const projects = [
   {
     id: 1,
@@ -59,7 +63,7 @@ const publications = [
   {
     title: "Computation of maximum slosh wave height for various viscous liquids with linear and non-linear models",
     affiliation: "Berlin International School",
-    journal: "Ocean Engineering",
+    journal: "ZAMM - Journal of Applied Mathematics and Mechanics",
     doi: "#",
     year: "July 2025 (pipeline)",
     keywords: ["Sloshing", "Maximum slosh wave height", "Linear mechanical model", "Non-linear mechanical model", "Duffing oscillator"]
@@ -70,14 +74,14 @@ const education = [
   {
     degree: "B.Eng. Electrical Engineering with Second Major in Physics",
     school: "National University of Singapore",
-    year: "2025-*2029",
+    year: "2025 - 2029",
     grade: "*",
     description: "B.Eng. Electrical Engineering with Second Major in Physics, specialising in VLSI",
   },
   {
     degree: "IB Diploma",
     school: "Berlin International School",
-    year: "2023-2025",
+    year: "2023 - 2025",
     grade: "IB 43 / 45",
     description: "HL: Physics, Mathematics AA, German B, SL: English A L&L, Chemistry, Economics, Extended Essay in Physics",
   }
@@ -179,10 +183,8 @@ function App() {
               </motion.div>
               <div>
                 <h1 className="text-4xl md:text-5xl font-extrabold text-green-900 mb-2">Aadith Yadav Govindarajan</h1>
-                <p className="text-xl text-green-700 mb-4">Aspiring engineering student @ Berlin International School</p>
-                <p className="text-yellow-900 max-w-xl mb-4">
-                  IB Student at Berlin International School with a passion for mechanical & electrical engineering. Part-time founder at Aadith Panels, a social enterprise focused on sustainable energy solutions.
-                </p>
+                <p className="text-xl text-green-700 mb-4">{subheading}</p>
+                <p className="text-yellow-900 max-w-xl mb-4">{description}</p>
                 <div className="flex gap-4">
                   <button
                     className="bg-green-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-800 shadow transition"
@@ -271,7 +273,7 @@ function App() {
                     <div className="w-4 h-4 bg-green-700 rounded-full absolute -left-3 top-2"></div>
                     <div className="bg-yellow-100 p-6 rounded-xl shadow-md ml-6 flex-1 hover:shadow-lg transition-shadow">
                       <h3 className="text-xl font-semibold text-green-800">{exp.position}</h3>
-                      <p className="text-green-700 font-medium">{exp.company}</p>
+                      <p className="text-yellow-900 font-medium">{exp.company}</p>
                       <p className="text-sm text-yellow-900 mb-2">{exp.year}</p>
                       <p className="text-yellow-900">{exp.description}</p>
                       <div className="flex flex-wrap gap-2 gap-top-2 mt-2">
@@ -313,7 +315,7 @@ function App() {
                   >
                     <div>
                       <h3 className="font-semibold text-green-800">{pubs.title}</h3>
-                      <p className="font-medium text-green-800">{pubs.journal}</p>
+                      <p className="font-medium text-yellow-900">{pubs.journal}</p>
                       <p className="text-sm text-yellow-900">{pubs.year}</p>
                       <div className="flex flex-wrap gap-2 gap-top-2 mt-2">
                         {pubs.keywords.map(keywords => (
@@ -353,7 +355,7 @@ function App() {
                     <div className="w-4 h-4 bg-green-700 rounded-full absolute -left-3 top-2"></div>
                     <div className="bg-yellow-100 p-6 rounded-xl shadow-md ml-6 flex-1 hover:shadow-lg transition-shadow">
                       <h3 className="text-xl font-semibold text-green-800">{edu.degree}</h3>
-                      <p className="text-green-700 font-medium">{edu.school}</p>
+                      <p className="text-yellow-900 font-medium">{edu.school}</p>
                       <p className="text-sm text-yellow-900 mb-2">{edu.year}</p>
                       <p className="text-yellow-900 mb-2 font-medium">Grade: {edu.grade}</p>
                       <p className="text-yellow-900">{edu.description}</p>
