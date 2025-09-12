@@ -1,147 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './index.css'
 import { motion } from 'framer-motion'
+import portfolioData from './data/portfolio-data.json'
 
-
-const subheading = "EE student @ NUS '29"
-const description = "Electrical Engineering student at NUS with an interest in VLSI and the semiconductor industry."
-
-const projects = [
-  {
-    id: 1,
-    title: "Aadith Panels",
-    description: "A social enterprise founded by myself focused on sustainable energy solutions by providing solar panel system designs to small power-intensive firms & organisations.",
-    tech: ["Python", "CAD/ANSYS", "Manufacturing", "Leadership"],
-    link: "https://yadavalu.github.io/Aadith-Panels/",
-    image: "/images/RGTemple.jpg"
-  },
-  {
-    id: 2,
-    title: "E-Library GUI System",
-    description: "Built an E-Library system for Radha-Govinda Temple to manage and keep track of their theological book inventory and lending system.",
-    tech: ["Python", "Qt5", "SQL"],
-    link: "https://gitlab.com/YG-alu/rg-temple-library",
-    image: "/images/E-library.jpg"
-  },
-  {
-    id: 3,
-    title: "E-Bike Conversion",
-    description: "Converted mechanical bicycle to an electric bicycle with a 250W motor, 24V battery and a custom PCB for control systems.",
-    tech: ["Manufacturing", "Control Systems"],
-    link: "#"
-  }
-]
-
-const experience = [
-  {
-    position: "Summer Internship",
-    company: "SAP Innovation Center",
-    location: "Potsdam, Germany",
-    year: "July 2025",
-    description: "Had an opportunity to learn the workings of SAP. Web development with ReactJs, NextJs and Python for EPR related projects.",
-    key: ["React.Js", "Next.Js", "Python", "Web Development"]
-  },
-  {
-    position: "Founder",
-    company: "Aadith Panels",
-    location: "Berlin, Germany",
-    year: "March 2024 - July 2025",
-    description: "Founded a social enterprise, consisting of a team of 7, focused on sustainable energy solutions, providing solar panel system designs to small power-intensive firms and organisations.",
-    key: ["Ansys", "CAD", "Manufacturing", "Leadership", "Business Ownership"],
-  },
-  {
-    position: "Student Internship",
-    company: "Rolls-Royce Deutschland Ltd & CO KG",
-    location: "Dahlewitz, Germany",
-    year: "June 2023",
-    description: "Assisted in the design of compressor blade with modal analysis using ANSYS, basics of CAD modelling for turbine fan blade, unittesting for python codebase and basics of project management.",
-    key: ["Ansys", "CAD", "Python", "Project Management"]
-  }
-]
-
-const publications = [
-  {
-    title: "Computation of maximum slosh wave height for various viscous liquids with linear and non-linear models",
-    affiliation: "Berlin International School",
-    journal: "ZAMM - Journal of Applied Mathematics and Mechanics",
-    doi: "#",
-    year: "July 2025 (pipeline)",
-    keywords: ["Sloshing", "Maximum slosh wave height", "Linear mechanical model", "Non-linear mechanical model", "Duffing oscillator"]
-  }
-]
-
-const education = [
-  {
-    degree: "B.Eng. Electrical Engineering with Second Major in Physics",
-    school: "National University of Singapore",
-    year: "2025 - 2029",
-    grade: "*",
-    description: "B.Eng. Electrical Engineering with Second Major in Physics, specialising in VLSI",
-  },
-  {
-    degree: "IB Diploma",
-    school: "Berlin International School",
-    year: "2023 - 2025",
-    grade: "IB 43 / 45",
-    description: "HL: Physics, Mathematics AA, German B, SL: English A L&L, Chemistry, Economics, Extended Essay in Physics",
-  }
-]
-
-const tech_skills = [
-  "Python", "Webdev", "Data Analysis", "CAD", "ANSYS", "Manufacturing"
-] 
-
-const soft_skills = [
-  "Leadership", "Project Management", "Problem Solving", "Teamwork", "Communication"
-]
-
-const languages = [
-  { name: "English", level: "Native" },
-  { name: "German", level: "Fluent C1" },
-  { name: "Tamil", level: "Mothertongue" },
-  { name: "Spanish", level: "Basics ~A1" },
-  { name: "Sanskrit", level: "Basics ~A1" }
-]
-
-const honors = [
-  { 
-    title: "Valedictorian award",
-    year: "June 2025",
-    awardedBy: "Berlin International School",
-    description: "Awarded for maintaining highest overall (German) GPA of 1.0 throughout the IB Diploma at Berlin International School",
-  },
-  { 
-    title: "DPG-Abiturpreis",
-    year: "June 2025",
-    awardedBy: "Deutsche Physikalische Gesellschaft",
-    description: "Awarded for outstanding performance in Physics during the IB Diploma",
-  },
-  { 
-    title: "Kant Prize 2025 Winner",
-    year: "May 2025",
-    awardedBy: "Stiftung Private Kant-Schulen gGmbH",
-    description: "Awarded for research paper stemming from our BL4S 2025 proposal on optimising neutron spallation target geometry",
-  },
-  { 
-    title: "Kant Medal 2025 Natural Science Nominee",
-    year: "May 2025",
-    awardedBy: "Stiftung Private Kant-Schulen gGmbH",
-    description: "Nominated for Kant Medal 2025 in Natural Science category for extended essay in modelling sloshing using mechanical models",
-  },
-  { 
-    title: "Cambridge IGCSE Mathematics Top in Germany Award",
-    year: "August 2023",
-    awardedBy: "Cambridge Assessment International Education",
-    description: "Awarded for achieving the highest mark in IGCSE Mathematics in Germany",
-  },
-  { 
-    title: "Cayley CEMS Waterloo Contest International High Honor Role",
-    year: "June 2023",
-    awardedBy: "CEMS, University of Waterloo",
-    description: "Awarded for achieving a score, ranking 34th internationally under Group III of the honour role, in the Cayley Mathematics contest",
-
-  }
-]
+// Extract data from JSON
+const { personal, projects, experience, publications, education, skills, languages, honors } = portfolioData
+const { subheading, description } = personal
+const { technical: tech_skills, soft: soft_skills } = skills
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -182,7 +47,7 @@ function App() {
                 AY
               </motion.div>
               <div>
-                <h1 className="text-4xl md:text-5xl font-extrabold text-green-900 mb-2">Aadith Yadav Govindarajan</h1>
+                <h1 className="text-4xl md:text-5xl font-extrabold text-green-900 mb-2">{personal.name}</h1>
                 <p className="text-xl text-green-700 mb-4">{subheading}</p>
                 <p className="text-yellow-900 max-w-xl mb-4">{description}</p>
                 <div className="flex gap-4">
@@ -471,21 +336,21 @@ function App() {
                 <div className="flex items-center gap-3">
                   <span className="text-green-700 text-xl font-semibold">Email:</span>
                   <a
-                    href="mailto:g.aadithyadav@gmail.com"
+                    href={`mailto:${personal.email}`}
                     className="text-green-900 underline hover:text-green-700 transition"
                   >
-                    g.aadithyadav@gmail.com
+                    {personal.email}
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-green-700 text-xl font-semibold">LinkedIn:</span>
                   <a
-                    href="https://www.linkedin.com/in/aadith-yadav-govindarajan-8a18b0280/"
+                    href={personal.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green-900 underline hover:text-green-700 transition"
                   >
-                    linkedin.com/in/aadith-yadav-govindarajan-8a18b0280/
+                    {personal.linkedin.replace('https://', '')}
                   </a>
                 </div>
               </div>
@@ -503,7 +368,7 @@ function App() {
       <nav className="fixed top-0 left-0 w-full z-30 bg-yellow/80 backdrop-blur shadow-sm">
         <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
           <span className="font-bold text-green-800 text-xl tracking-tight cursor-pointer" onClick={() => setActiveSection('about')}>
-            Aadith Yadav G.
+            {personal.name.split(' ').slice(0, 2).join(' ') + ' G.'}
           </span>
           <div className="flex gap-6 text-green-900 font-medium text-sm overflow-x-auto scrollbar-thin scrollbar-thumb-[#d8ad71] scrollbar-track-transparent whitespace-nowrap">
             {sectionList.map((sec) => (
@@ -526,7 +391,7 @@ function App() {
 
       {/* Footer */}
       <footer className="text-center py-6 text-green-900 text-sm fixed bottom-0 left-0 w-full bg-yello/80 pointer-events-none select-none">
-        &copy; {new Date().getFullYear()} Aadith Yadav G. All rights reserved.
+        &copy; {new Date().getFullYear()} {personal.name.split(' ').slice(0, 2).join(' ') + ' G.'} All rights reserved.
       </footer>
     </div>
   )
