@@ -8,7 +8,15 @@
   },
   "projects": [
     {
-      "id": 1,
+      "id": 4,
+      "title": "Robust 1-bit 10T SRAM on CMOS 45nm technology node",
+      "description": "As a part of the IEEE SSCS Student Circtuit Contest 2025, designed and verified a robust 1-bit 10T SRAM cell with read and write access functionalities on CMOS 45nm technology node using LTspice and Verilog.",
+      "tech": ["LTspice", "Verilog"],
+      "link": "",
+      "image": ""
+    },
+    {
+      "id": 3,
       "title": "Aadith Panels",
       "description": "A social enterprise founded by myself focused on sustainable energy solutions by providing solar panel system designs to small power-intensive firms & organisations.",
       "tech": ["Python", "CAD/ANSYS", "Manufacturing", "Leadership"],
@@ -24,7 +32,7 @@
       "image": "/images/E-library.jpg"
     },
     {
-      "id": 3,
+      "id": 1,
       "title": "E-Bike Conversion",
       "description": "Converted mechanical bicycle to an electric bicycle with a 250W motor, 24V battery and a custom PCB for control systems.",
       "tech": ["Manufacturing", "Control Systems"],
