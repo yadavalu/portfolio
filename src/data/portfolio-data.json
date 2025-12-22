@@ -1,16 +1,24 @@
 {
   "personal": {
     "name": "Aadith Yadav Govindarajan",
-    "subheading": "EE student @ NUS '29",
-    "description": "Electrical Engineering student at NUS with an interest in VLSI and the semiconductor industry.",
+    "subheading": "EE & Physics student @ NUS '29 | A*STAR IME Research Attachement",
+    "description": "Electrical Engineering and Physics student at NUS specialising in Microelectronics and Quantum Materials. Burning interest in semiconductor materials and technology",
     "email": "g.aadithyadav@gmail.com",
     "linkedin": "https://www.linkedin.com/in/aadith-yadav-g/"
   },
   "projects": [
     {
+      "id": 5,
+      "title": "Automated design of a 4-bit R2R DAC",
+      "description": "Automated the analog design of a 4-bit R2R DAC with ALIGN on the SKY130 PDK using Python Jupyter notebook. Submitted to IEEE SSCS OSE Code-a-Chip Contest 2025 for ISSCC26",
+      "tech": ["Analog design", "Python"],
+      "link": "https://github.com/sscs-ose/sscs-ose-code-a-chip.github.io/tree/main/ISSCC26/submitted_notebooks/Auto-R2R-DAC",
+      "image": "/images/gds-result.png"
+    },
+    {
       "id": 4,
       "title": "Robust 1-bit 10T SRAM on CMOS 45nm technology node",
-      "description": "As a part of the IEEE SSCS Student Circtuit Contest 2025, designed and verified a robust 1-bit 10T SRAM cell with read and write access functionalities on CMOS 45nm technology node using LTspice and Verilog.",
+      "description": "As a part of the IEEE SSCS Student Circuit Contest 2025, designed and verified a robust 1-bit 10T SRAM cell with read and write access functionalities on CMOS 45nm technology node using LTspice and Verilog.",
       "tech": ["LTspice", "Verilog"],
       "link": "",
       "image": ""
@@ -36,52 +44,65 @@
       "title": "E-Bike Conversion",
       "description": "Converted mechanical bicycle to an electric bicycle with a 250W motor, 24V battery and a custom PCB for control systems.",
       "tech": ["Manufacturing", "Control Systems"],
-      "link": "#"
+      "link": "#",
+      "image": ""
     }
   ],
   "experience": [
+    {
+      "position": "Research Attachment",
+      "company": "A*STAR IME",
+      "location": "Singapore, Singapore",
+      "year": "December 2025 - present",
+      "description": "Research attachment in IC design and advanced packaging",
+      "key": ["Verilog"]
+    },
     {
       "position": "Summer Internship",
       "company": "SAP Innovation Center",
       "location": "Potsdam, Germany",
       "year": "July 2025",
-      "description": "Had an opportunity to learn the workings of SAP. Web development with ReactJs, NextJs and Python for EPR related projects.",
-      "key": ["React.Js", "Next.Js", "Python", "Web Development"]
-    },
-    {
-      "position": "Founder",
-      "company": "Aadith Panels",
-      "location": "Berlin, Germany",
-      "year": "March 2024 - July 2025",
-      "description": "Founded a social enterprise, consisting of a team of 7, focused on sustainable energy solutions, providing solar panel system designs to small power-intensive firms and organisations.",
-      "key": ["Ansys", "CAD", "Manufacturing", "Leadership", "Business Ownership"]
+      "description": "Collaborated on email automation project with Next.js and delivered ERP related projects with Python to save time in workflow.",
+      "key": ["React", "Next.js", "Python", "Web Development"],
+      
+      "comment": [
+        {
+          "position": "Founder",
+          "company": "Aadith Panels",
+          "location": "Berlin, Germany",
+          "year": "March 2024 - July 2025",
+          "description": "Founded and led a 7 member social enterprise, advancing sustainable energy solutions by providing innovative solar panel system designs to small power-intensive trusts and organisations. Produced nearly 24kW power, saving costs (~€ 2000 / yr).",
+          "key": ["Ansys", "CAD", "Manufacturing", "Leadership", "Business Ownership"]
+        }
+      ]
     },
     {
       "position": "Student Internship",
       "company": "Rolls-Royce Deutschland Ltd & CO KG",
       "location": "Dahlewitz, Germany",
       "year": "June 2023",
-      "description": "Assisted in the design of compressor blade with modal analysis using ANSYS, basics of CAD modelling for turbine fan blade, unittesting for python codebase and basics of project management.",
+      "description": "Focused on design of compressor blade with modal analysis using ANSYS, CAD modelling for turbine fan blade and unit-testing for python codebase.",
       "key": ["Ansys", "CAD", "Python", "Project Management"]
     }
   ],
   "publications": [
     {
-      "title": "Computation of maximum slosh wave height for various viscous liquids with linear and non-linear models",
+      "title": "Fractional Calculus Application in Modelling Non-linear Sloshing",
       "affiliation": "Berlin International School",
-      "journal": "ZAMM - Journal of Applied Mathematics and Mechanics",
+      "journal": "Nonlinear Analysis: Real World Applications",
       "doi": "#",
-      "year": "July 2025 (pipeline)",
-      "keywords": ["Sloshing", "Maximum slosh wave height", "Linear mechanical model", "Non-linear mechanical model", "Duffing oscillator"]
+      "year": "November 2025 (pipeline)",
+      "keywords": ["Sloshing", "Fractional calculus", "Visco-elastic model", "Linear mechanical model", "Non-linear mechanical model", "Duffing oscillator"]
     }
+    
   ],
   "education": [
     {
-      "degree": "B.Eng. Electrical Engineering with Second Major in Physics",
+      "degree": "B.Eng. Electrical Engineering, Physics",
       "school": "National University of Singapore",
       "year": "2025 - 2029",
       "grade": "*",
-      "description": "B.Eng. Electrical Engineering with Second Major in Physics, specialising in VLSI"
+      "description": "B.Eng. Electrical Engineering with Second Major in Physics, specialising in Microelectronics and Quantum Materials"
     },
     {
       "degree": "IB Diploma",
@@ -92,7 +113,7 @@
     }
   ],
   "skills": {
-    "technical": ["Python", "Webdev", "Data Analysis", "CAD", "ANSYS", "Manufacturing"],
+    "technical": ["Python", "Verilog", "Webdev", "Data Analysis", "CAD", "ANSYS", "Manufacturing"],
     "soft": ["Leadership", "Project Management", "Problem Solving", "Teamwork", "Communication"]
   },
   "languages": [
