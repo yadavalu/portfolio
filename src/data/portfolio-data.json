@@ -1,25 +1,33 @@
 {
   "personal": {
     "name": "Aadith Yadav Govindarajan",
-    "subheading": "EE & Physics undergrad @ NUS '29 | A*STAR IME Research Attachement",
-    "description": "Electrical Engineering and Physics student at NUS specialising in Microelectronics and Quantum Materials. Burning interest in semiconductor materials and technology",
+    "subheading": "Material Science & Engineering and Physics undergrad @ NUS '29 | Ferdinand-Braun-Institut (Leibnitz Institut für Hochfrequenztechnik) Research Internship",
+    "description": "Material Science & Engineering and Physics student at NUS. Burning interest in aerospace and semiconductor materials and technology",
     "email": "g.aadithyadav@gmail.com",
     "linkedin": "https://www.linkedin.com/in/aadith-yadav-g/"
   },
   "projects": [
+    {
+      "id": 6,
+      "title": "ASIC for  Bose-Chaudhuri-Hocquenghem Correction Code (15,7,2)",
+      "description": "Designed an ASIC in the 130nm CMOS technology node for BCH error correction code, achieving a 15-bit (8-bit message, 7-bit checksum) communication with up to 2-bit error correction. The design was implemented using Verilog and synthesized with Synopsys Design Compiler.",
+      "tech": ["Verilog", "OpenLane", "Cocotb", "SKY130 PDK", "ASIC design"],
+      "link": "https://tinytapeout.com/chips/ttsky26a/tt_um_bch_code_15_7_2",
+      "image": "/images/bch-gds.png"
+    },
     {
       "id": 5,
       "title": "Automated design of a 4-bit R2R DAC",
       "description": "Automated the analog design of a 4-bit R2R DAC with ALIGN on the SKY130 PDK using Python Jupyter notebook. Submitted to IEEE SSCS OSE Code-a-Chip Contest 2025 for ISSCC26",
       "tech": ["Analog design", "Python"],
       "link": "https://github.com/sscs-ose/sscs-ose-code-a-chip.github.io/tree/main/ISSCC26/submitted_notebooks/Auto-R2R-DAC",
-      "image": "/images/gds-result.png"
+      "image": "/images/r2r-gds.png"
     },
     {
       "id": 4,
       "title": "Robust 1-bit 10T SRAM on CMOS 45nm technology node",
       "description": "As a part of the IEEE SSCS Student Circuit Contest 2025, designed and verified a robust 1-bit 10T SRAM cell with read and write access functionalities on CMOS 45nm technology node using LTspice and Verilog.",
-      "tech": ["LTspice", "Verilog"],
+      "tech": ["LTspice"],
       "link": "",
       "image": ""
     },
@@ -50,12 +58,20 @@
   ],
   "experience": [
     {
-      "position": "Research Attachment",
-      "company": "A*STAR IME",
-      "location": "Singapore, Singapore",
+      "position": "Research Internship",
+      "company": "Ferdinand-Braun-Institut (Leibnitz Institut für Hochfrequenztechnik)",
+      "location": "Berlin, Germany",
+      "year": "May 2026 - present",
+      "description": "Research internship in photoluminescence characterisation of semiconductor materials. Developed experimental setup for photoluminescence measurements and performed data analysis using Python & Simulink to extract material properties.",
+      "key": ["Simulink", "Python", "LabVIEW", "Photoluminesence", "Semiconductor Materials"]
+    },
+    {
+      "position": "Cofounder",
+      "company": "SafeRail.AI",
+      "location": "Berlin, Germany",
       "year": "December 2025 - present",
-      "description": "Research attachment in IC design and advanced packaging",
-      "key": ["Verilog"]
+      "description": "Enterprise solution to ennsure employee communications are compliant with company policies and regulatory requirements. Developed a Chrome extension to monitor and analyze employee communications in real-time, leveraging LLMs for natural language processing and compliance checks.",
+      "key": ["LLM", "Chrome Extension", "Plasmo/React"]
     },
     {
       "position": "Summer Internship",
@@ -98,11 +114,11 @@
   ],
   "education": [
     {
-      "degree": "B.Eng. Electrical Engineering, Physics",
+      "degree": "B.Eng. Material Science & Engineering, Physics",
       "school": "National University of Singapore",
       "year": "2025 - 2029",
       "grade": "*",
-      "description": "B.Eng. Electrical Engineering with Second Major in Physics, specialising in Microelectronics and Quantum Materials"
+      "description": "B.Eng. Material Science & Engineering with Second Major in Physics."
     },
     {
       "degree": "IB Diploma",
@@ -113,7 +129,7 @@
     }
   ],
   "skills": {
-    "technical": ["Python", "Verilog", "Webdev", "Data Analysis", "CAD", "ANSYS", "Manufacturing"],
+    "technical": ["Python", "Verilog", "MATLAB/SIMULINK", "Webdev", "Data Analysis", "CAD", "Fusion360", "ANSYS", "Manufacturing"],
     "soft": ["Leadership", "Project Management", "Problem Solving", "Teamwork", "Communication"]
   },
   "languages": [
