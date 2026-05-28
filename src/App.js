@@ -48,7 +48,7 @@ function App() {
               </motion.div>
               <div>
                 <h1 className="text-4xl md:text-5xl font-extrabold text-green-900 mb-2">{personal.name}</h1>
-                <p className="text-xl text-green-700 mb-4">{subheading}</p>
+                <p className="text-xl text-green-700 mb-4 max-w-2xl">{subheading}</p>
                 <p className="text-yellow-900 max-w-xl mb-4">{description}</p>
                 <div className="flex gap-4">
                   <button
