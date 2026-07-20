@@ -1,0 +1,195 @@
+{
+  "personal": {
+    "name": "Aadith Yadav Govindarajan",
+    "subheading": "Mechanical Engineering undergrad @ NUS '29 | Ferdinand-Braun-Institut Summer Internship | ´Chair of IEEE-NUS Student Branch",
+    "description": "Mechanical Engineering and Material Science & Engineering student at NUS. Burning interest in aerospace and semiconductor technology",
+    "email": "g.aadithyadav@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/aadith-yadav-g/",
+    "github": "https://github.com/yadavalu",
+    "orcid": "https://orcid.org/0009-0001-7582-6697"
+  },
+  "projects": [
+    {
+      "id": 6,
+      "title": "ASIC for  Bose-Chaudhuri-Hocquenghem Correction Code (15,7,2)",
+      "description": "Designed an ASIC in the 130nm CMOS technology node for BCH error correction code, achieving a 15-bit (8-bit message, 7-bit checksum) communication with up to 2-bit error correction. The design was implemented using Verilog and synthesized with Synopsys Design Compiler.",
+      "tech": ["Verilog", "OpenLane", "Cocotb", "SKY130 PDK", "ASIC design"],
+      "link": "https://tinytapeout.com/chips/ttsky26a/tt_um_bch_code_15_7_2",
+      "image": "/images/bch-gds.png"
+    },
+    {
+      "id": 5,
+      "title": "Automated design of a 4-bit R2R DAC",
+      "description": "Automated the analog design of a 4-bit R2R DAC with ALIGN on the SKY130 PDK using Python Jupyter notebook. Submitted to IEEE SSCS OSE Code-a-Chip Contest 2025 for ISSCC26",
+      "tech": ["Analog design", "Python"],
+      "link": "https://github.com/sscs-ose/sscs-ose-code-a-chip.github.io/tree/main/ISSCC26/submitted_notebooks/Auto-R2R-DAC",
+      "image": "/images/r2r-gds.png"
+    },
+    {
+      "id": 4,
+      "title": "Robust 1-bit 10T SRAM on CMOS 45nm technology node",
+      "description": "As a part of the IEEE SSCS Student Circuit Contest 2025, designed and verified a robust 1-bit 10T SRAM cell with read and write access functionalities on CMOS 45nm technology node using LTspice and Verilog.",
+      "tech": ["LTspice"],
+      "link": "",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "title": "Aadith Panels",
+      "description": "A social enterprise founded by myself focused on sustainable energy solutions by providing solar panel system designs to small power-intensive firms & organisations.",
+      "tech": ["Python", "CAD/ANSYS", "Manufacturing", "Leadership"],
+      "link": "https://yadavalu.github.io/Aadith-Panels/",
+      "image": "/images/RGTemple.jpg"
+    },
+    {
+      "id": 2,
+      "title": "E-Library GUI System",
+      "description": "Built an E-Library system for Radha-Govinda Temple to manage and keep track of their theological book inventory and lending system.",
+      "tech": ["Python", "Qt5", "SQL"],
+      "link": "https://gitlab.com/YG-alu/rg-temple-library",
+      "image": "/images/E-library.jpg"
+    },
+    {
+      "id": 1,
+      "title": "E-Bike Conversion",
+      "description": "Converted mechanical bicycle to an electric bicycle with a 250W motor, 24V battery and a custom PCB for control systems.",
+      "tech": ["Manufacturing", "Control Systems"],
+      "link": "#",
+      "image": ""
+    }
+  ],
+  "experience": [
+    {
+      "position": "Research Internship",
+      "company": "Ferdinand-Braun-Institut (Leibnitz Institut für Hochfrequenztechnik)",
+      "location": "Berlin, Germany",
+      "year": "May 2026 - present",
+      "description": "Research internship in photoluminescence characterisation of semiconductor materials. Developed experimental setup for photoluminescence measurements and performed data analysis using Python & Simulink to extract material properties.",
+      "key": ["Simulink", "Python", "LabVIEW", "Photoluminesence"]
+    },
+    {
+      "position": "Cofounder",
+      "company": "SafeRail.AI",
+      "location": "Berlin, Germany",
+      "year": "December 2025 - present",
+      "description": "Enterprise solution to ennsure employee communications are compliant with company policies and regulatory requirements. Developed a Chrome extension to monitor and analyze employee communications in real-time, leveraging LLMs for natural language processing and compliance checks.",
+      "key": ["LLM", "Chrome Extension", "Plasmo/React"]
+    },
+    {
+      "position": "Summer Internship",
+      "company": "SAP Innovation Center",
+      "location": "Potsdam, Germany",
+      "year": "July 2025",
+      "description": "Collaborated on email automation project with Next.js and delivered ERP related projects with Python to save time in workflow.",
+      "key": ["React", "Next.js", "Python", "Web Development"],
+      
+      "comment": [
+        {
+          "position": "Founder",
+          "company": "Aadith Panels",
+          "location": "Berlin, Germany",
+          "year": "March 2024 - July 2025",
+          "description": "Founded and led a 7 member social enterprise, advancing sustainable energy solutions by providing innovative solar panel system designs to small power-intensive trusts and organisations. Produced nearly 24kW power, saving costs (~€ 2000 / yr).",
+          "key": ["Ansys", "CAD", "Manufacturing", "Leadership", "Business Ownership"]
+        }
+      ]
+    },
+    {
+      "position": "Student Internship",
+      "company": "Rolls-Royce Deutschland Ltd & CO KG",
+      "location": "Dahlewitz, Germany",
+      "year": "June 2023",
+      "description": "Focused on design of compressor blade with modal analysis using ANSYS, CAD modelling for turbine fan blade and unit-testing for python codebase.",
+      "key": ["Ansys", "CAD", "Python", "Project Management"]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Fractional Calculus Application in Modelling Non-linear Sloshing",
+      "affiliation": "Berlin International School",
+      "journal": "MDPI eng",
+      "doi": "DOI:10.3390/eng7070341",
+      "link": "https://www.mdpi.com/2673-4117/7/7/341",
+      "year": "July 2026",
+      "keywords": ["Sloshing", "Fractional calculus", "Visco-elastic model", "Linear mechanical model", "Non-linear mechanical model", "Duffing oscillator"]
+    }
+    
+  ],
+  "education": [
+    {
+      "degree": "B.Eng. Mechanical Engineering (hons.), Material Science & Engineering",
+      "school": "National University of Singapore",
+      "year": "2025 - 2029",
+      "grade": "*",
+      "description": "B.Eng. Mechanical Engineering (hons.) with minor in Material Science & Engineering and specialisation in Aeronautical Engineering."
+    },
+    {
+      "degree": "IB Diploma",
+      "school": "Berlin International School",
+      "year": "2023 - 2025",
+      "grade": "IB 43 / 45",
+      "description": "HL: Physics, Mathematics AA, German B, SL: English A L&L, Chemistry, Economics, Extended Essay in Physics"
+    }
+  ],
+  "skills": {
+    "technical": ["Python", "Verilog", "MATLAB/SIMULINK", "Webdev", "Data Analysis", "CAD", "Fusion360", "ANSYS", "Manufacturing"],
+    "soft": ["Leadership", "Project Management", "Problem Solving", "Teamwork", "Communication"]
+  },
+  "languages": [
+    { "name": "English", "level": "Native" },
+    { "name": "German", "level": "Fluent C1" },
+    { "name": "Tamil", "level": "Mothertongue" },
+    { "name": "Spanish", "level": "Basics ~A1" },
+    { "name": "Sanskrit", "level": "Basics ~A1" }
+  ],
+  "honors": [
+    {
+      "title": "Feature paper",
+      "year": "Jul 2026",
+      "awardedBy": "mdpi.com",
+      "description": "Paper \"Fractional Calculus Application in Modelling Non-linear Sloshing\" featured in MDPI eng Volume 7 Issue 7 cover page"
+    },
+    {
+      "title": "IAAC Finals 2025 Silver Honors",
+      "year": "Sept 2025",
+      "awardedBy": "iaac.space",
+      "description": "Awarded for performance in International Astronomy and Astrophysics Competition Finals 2025"
+    },
+    {
+      "title": "Valedictorian award",
+      "year": "June 2025",
+      "awardedBy": "Berlin International School",
+      "description": "Awarded for maintaining highest overall (German) GPA of 1.0 throughout the IB Diploma at Berlin International School"
+    },
+    {
+      "title": "DPG-Abiturpreis",
+      "year": "June 2025",
+      "awardedBy": "Deutsche Physikalische Gesellschaft",
+      "description": "Awarded for outstanding performance in Physics during the IB Diploma"
+    },
+    {
+      "title": "Kant Prize 2025 Winner",
+      "year": "May 2025",
+      "awardedBy": "Stiftung Private Kant-Schulen gGmbH",
+      "description": "Awarded for research paper stemming from our BL4S 2025 proposal on optimising neutron spallation target geometry"
+    },
+    {
+      "title": "Kant Medal 2025 Natural Science Nominee",
+      "year": "May 2025",
+      "awardedBy": "Stiftung Private Kant-Schulen gGmbH",
+      "description": "Nominated for Kant Medal 2025 in Natural Science category for extended essay in modelling sloshing using mechanical models"
+    },
+    {
+      "title": "Cambridge IGCSE Mathematics Top in Germany Award",
+      "year": "August 2023",
+      "awardedBy": "Cambridge Assessment International Education",
+      "description": "Awarded for achieving the highest mark in IGCSE Mathematics in Germany"
+    },
+    {
+      "title": "Cayley CEMS Waterloo Contest International High Honor Role",
+      "year": "June 2023",
+      "awardedBy": "CEMS, University of Waterloo",
+      "description": "Awarded for achieving a score, ranking 34th internationally under Group III of the honour role, in the Cayley Mathematics contest"
+    }
+  ]
+}
