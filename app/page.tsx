@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import portfolioData from './data/portfolio-data.json'
+import { resolveAssetPath } from './lib/assetPaths';
 
 
 //const portfolioData = 
@@ -85,7 +86,7 @@ export default function Home() {
                   >
                     <div className="mb-4 flex h-32 w-full items-center justify-center rounded-xl bg-yellow-200 text-3xl text-green-400 transition group-hover:text-green-700">
                       {project.image ? (
-                        <img src={project.image} alt={project.title} className="h-32 w-full rounded-lg object-cover" />
+                        <img src={resolveAssetPath(project.image)} alt={project.title} className="h-32 w-full rounded-lg object-cover" />
                       ) : (
                         <span role="img" aria-label="project">💡</span>
                       )}
