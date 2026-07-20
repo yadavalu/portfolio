@@ -17,7 +17,7 @@ const sectionVariants = {
 };
 
 export default function Home() {
-  const sectionList = ["about", "projects", "experience", "publications", "education", "skills", "honors", "contact"];
+  const sectionList = ["about", "experience", "education", "projects", "publications", "skills", "honors", "contact"];
   const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
