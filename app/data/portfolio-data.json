@@ -10,6 +10,14 @@
   },
   "projects": [
     {
+      "id": 7,
+      "title": "Mechanical characterisation of forged carbon fibre for Formula SAE car",
+      "description": "Fabricated and tested forged carbon fibre with different ratios of resin to carbon tows on universal tensile test. Simulated properties for future design implementations on Formula SAE chassis.",
+      "tech": ["Mold Casting", "SolidWorks", "Ansys Mecahnical"],
+      "link": "",
+      "image": ""
+    },
+    {
       "id": 6,
       "title": "ASIC for  Bose-Chaudhuri-Hocquenghem Correction Code (15,7,2)",
       "description": "Designed an ASIC in the 130nm CMOS technology node for BCH error correction code, achieving a 15-bit (8-bit message, 7-bit checksum) communication with up to 2-bit error correction. The design was implemented using Verilog and synthesized with Synopsys Design Compiler.",
