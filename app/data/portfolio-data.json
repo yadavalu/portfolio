@@ -1,8 +1,8 @@
 {
   "personal": {
     "name": "Aadith Yadav Govindarajan",
-    "subheading": "Mechanical Engineering undergrad @ NUS '29 | Ferdinand-Braun-Institut Summer Internship | Chair of IEEE-NUS Student Branch",
-    "description": "Mechanical Engineering and Material Science & Engineering student at NUS. Burning interest in aerospace and semiconductor technology",
+    "subheading": "Mechanical Engineering undergrad @ NUS '29 | Researcher at I-FIM | Chair of IEEE-NUS Student Branch",
+    "description": "Mechanical Engineering and Material Science & Engineering student at NUS. Burning interest in aerospace, motorsport and semiconductor technology",
     "email": "g.aadithyadav@gmail.com",
     "linkedin": "https://www.linkedin.com/in/aadith-yadav-g/",
     "github": "https://github.com/yadavalu",
@@ -68,10 +68,18 @@
   ],
   "experience": [
     {
-      "position": "Research Internship",
+      "position": "Researcher UROP",
+      "company": "Institute of Functional Intelligent Materials, NUS",
+      "location": "Singapore",
+      "year": "August 2026 - present",
+      "description": "Research on advanced 2D materials for single photon emission, with applications in quantum computing.",
+      "key": ["Mechanical Exfoliation", "AFM", "Optical Microscopy", "Photoluminesence", "Pandas"]
+    },
+    {
+      "position": "Summer Internship",
       "company": "Ferdinand-Braun-Institut (Leibnitz Institut für Hochfrequenztechnik)",
       "location": "Berlin, Germany",
-      "year": "May 2026 - present",
+      "year": "May 2026 - July 2026",
       "description": "Research internship in photoluminescence characterisation of semiconductor materials. Developed experimental setup for photoluminescence measurements and performed data analysis using Python & Simulink to extract material properties.",
       "key": ["Simulink", "Python", "LabVIEW", "Photoluminesence"]
     },
